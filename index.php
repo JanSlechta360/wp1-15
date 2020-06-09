@@ -2,7 +2,6 @@
 
 $submit = filter_input(INPUT_POST, 'submit');
 $dough = filter_input(INPUT_POST, 'dough');
-$ingredients = $_POST['ingredients'];
 
 ?>
 <!DOCTYPE html>
@@ -25,6 +24,7 @@ $ingredients = $_POST['ingredients'];
         
         <ul>
         <?php
+        $ingredients = $_POST['ingredients'];
         foreach ($ingredients as $item) { ?>
             <li><?= $item; ?></li>
         <?php }
